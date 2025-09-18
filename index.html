@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gourmet Spot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fff9c4, #ffa07a, #ffe5b4); /* soft yellow → salmon pink → light peach */
+    }
+
+    /* Navbar */
+    nav {
+      background: #ff9999; /* light red */
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: black;
+      left: 0;
+      bottom: 0;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #fffacd, #ffc0cb);
+      padding: 40px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .hero-text {
+      flex: 1;
+      padding: 30px;
+      min-width: 280px;
+      margin-top: -20px; /* move heading slightly upward */
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #4d4d4d;
+    }
+
+    .hero-text button {
+      background: #ff9999;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      display: block;
+      margin: auto;
+    }
+
+    .hero-img {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Gallery + Text Section */
+    .gallery-text-section {
+      display: flex;
+      padding: 40px;
+      gap: 20px;
+      background: linear-gradient(to right, #fffacd, #ffc0cb);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .gallery {
+      flex: 1.1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 200px);
+      gap: 12px;
+      min-width: 280px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .text-box {
+      flex: 0.8; /* slightly smaller */
+      background: #ff9999;
+      color: white;
+      padding: 25px; /* reduced padding */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 10px;
+      min-width: 250px;
+    }
+
+    .text-box h2 {
+      font-size: 24px; /* slightly smaller heading */
+      margin-bottom: 12px;
+    }
+
+    .text-box p {
+      margin-bottom: 16px;
+      font-size: 14px; /* slightly smaller paragraph */
+    }
+
+    .text-box a {
+      text-decoration: none;
+      color: black;
+      background: none;
+      border-bottom: 2px solid black;
+      padding-bottom: 5px;
+      font-size: 14px;
+      width: fit-content;
+      transition: 0.3s;
+    }
+
+    .text-box a:hover {
+      background: black;
+      color: white;
+      border-bottom: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Specials</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Delicious Flavors, Crafted With Love</h1>
+      <p>Experience the finest culinary delights made from fresh ingredients. Our dishes are prepared with passion to give you an unforgettable dining experience.</p>
+      <button>Reserve a Table</button>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&auto=format&fit=crop&q=80" alt="Meal Plates">
+    </div>
+  </section>
+
+  <!-- Gallery + Text Section -->
+  <section class="gallery-text-section">
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format&fit=crop&q=80" alt="Restaurant Chairs">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop&q=80" alt="Hotel Interior">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=80" alt="French Fries">
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&auto=format&fit=crop&q=80" alt="Burgers">
+    </div>
+    <div class="text-box">
+      <h2>Our Signature Dishes</h2>
+      <p>From gourmet burgers to crispy fries and exquisite desserts, explore our variety of mouth-watering specialties.</p>
+      <a href="#">View Menu ➜</a>
+    </div>
+  </section>
+
+  <footer>
+    Contact us | Little Buttons | © 2025 The Gourmet Spot
+  </footer>
+</body>
+</html>
